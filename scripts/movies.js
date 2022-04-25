@@ -5,7 +5,7 @@ let movie_div = document.getElementById("movies");
 
 let money = JSON.parse(localStorage.getItem("amount"));
 //console.log(money[0]);
-document.getElementById("wallet").innerText=money[0];
+document.getElementById("wallet").innerText=money;
 
 let objArr = JSON.parse(localStorage.getItem("movie"))||[];
 let flag;

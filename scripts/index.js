@@ -4,15 +4,14 @@
     return document.getElementById(id).value;
   }
   
-  let twallet = JSON.parse(localStorage.getItem("amount"))||[];
-  
+  let twallet = JSON.parse(localStorage.getItem("amount"))||0;
+  let wallet = document.querySelector("#wallet");
+   
   function addWallet(){
     let amount = getbyId("amount");
-  console.log(amount);
-    let wallet = document.querySelector("#wallet");
-    wallet.innerText=amount;
-    // console.log(typeof twallet[0])
-    twallet.push(wallet.innerHTML);
+    
+    twallet = Number(twallet)+Number(amount);
+    wallet.innerText=twallet;
     localStorage.setItem(("amount"),JSON.stringify(twallet));
   }
   
